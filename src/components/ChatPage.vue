@@ -46,7 +46,7 @@ export default {
           'Context': this.test_context
           })
       .then((response) => {
-        if (response.data.status == 'exit') {
+        if (response.data.status === 'exit') {
           this.refresh()
           return
         }
@@ -73,7 +73,7 @@ export default {
           'Context': this.test_context
           })
       .then((response) => {
-        if (response.data.status == 'exit') {
+        if (response.data.status === 'exit') {
           this.refresh()
           return
         }
@@ -98,7 +98,7 @@ export default {
           this.global_id = response.data.testsuite.global_id
           this.client_app = response.data.testsuite.client_app
           
-          if (response.data.testsuite.theme == 'dark') {
+          if (response.data.testsuite.theme === 'dark') {
             this.$vuetify.theme.dark = true
           } else {
             this.$vuetify.theme.dark = false
@@ -147,5 +147,12 @@ export default {
   padding: 2%;
   overflow: auto;
   overflow-x: hidden
+}
+
+@media all and (max-width: 720px) {
+  .chat {
+    width: 100%;
+    height: 100vh;
+  }
 }
 </style>
