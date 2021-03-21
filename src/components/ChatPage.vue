@@ -38,7 +38,10 @@ export default {
       axios.post(this.skill_working_url + '/skill', {
           'User': {
             'user_id': 0,
-            'client_app': 'testsuite'
+            'client': {
+              'name': 'testsuite',
+              'type': 'text'
+            }
           },
           'Update': {
             'in_text': message
@@ -65,7 +68,10 @@ export default {
       axios.post(this.skill_working_url + '/skill', {
           'User': {
             'user_id': 0,
-            'client_app': 'testsuite'
+            'client': {
+              'name': 'testsuite',
+              'type': 'text'
+            }
           },
           'Update': {
             'in_choice': choice
